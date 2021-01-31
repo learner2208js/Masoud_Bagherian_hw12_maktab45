@@ -1,5 +1,4 @@
 const http = require('http');
-const { runInNewContext } = require('vm');
 
 http
   .createServer(function (req, res) {
