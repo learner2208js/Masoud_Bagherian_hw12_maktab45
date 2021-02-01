@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/font-awesome/css/font-awesome.min.css"
+    />
+    <title>users pagination</title>
+  </head>
+  <body>
+    <div class="backdrop" id="backdrop"></div>
+    <div class="profile" id="profile-modal">
+      <div class="profile__image">
+        <img src="" alt="" class="img" id="profile-image" />
+        <button class="profile__image-btn" id="profile-image-btn"></button>
+        <p class="profile__image-alert" id="profile-image-alert">
+          Please choose an image
+        </p>
+      </div>
+      <!-- end .profile__image -->
+      <input
+        type="file"
+        class="profile__image-selector"
+        id="profile-image-selector"
+      />
+
+      <form class="profile__form" id="profile-form">
+        <div class="profile__form-group">
+          <label for="profile-firstname" class="profile__label"
+            >first name</label
+          >
+          <input
+            type="text"
+            class="profile__input"
+            id="profile-firstname"
+            autocomplete="off"
+          />
+          <p class="profile__alert">first name is required</p>
+        </div>
+        <!-- end .profile__form-group -->
+
+        <div class="profile__form-group">
+          <label for="profile-lastname" class="profile__label">last name</label>
+          <input
+            type="text"
+            class="profile__input"
+            id="profile-lastname"
+            autocomplete="off"
+          />
+          <p class="profile__alert">last name is required</p>
+        </div>
+        <!-- end .profile__form-group -->
+
+        <div class="profile__form-group">
+          <label for="profile-email" class="profile__label">email</label>
+          <input
+            type="text"
+            class="profile__input"
+            id="profile-email"
+            autocomplete="off"
+          />
+          <p class="profile__alert">email is required</p>
+        </div>
+        <!-- end .profile__form-group -->
+        <div class="profile__buttons">
+          <button
+            class="profile__btn profile__btn--update"
+            id="profile-update-btn"
+          >
+            update
+          </button>
+          <button
+            class="profile__btn profile__btn--delete"
+            id="profile-delete-btn"
+          >
+            delete
+          </button>
+          <button
+            class="profile__btn profile__btn--cancel"
+            id="profile-cancel-btn"
+          >
+            cancel
+          </button>
+        </div>
+        <!-- end .profile__buttons -->
+      </form>
+      <!-- end .profile__form -->
+    </div>
+    <!-- end .profile -->
+    <div class="add-box" id="add-box-modal">
+      <div class="add-box__image">
+        <img
+          src="assets/image/user-avatar.jpg"
+          alt=""
+          class="img"
+          id="add-box-image"
+        />
+        <button class="add-box__image-btn" id="add-box-image-btn"></button>
+        <p class="add-box__image-alert" id="add-box-image-alert">
+          Please choose an image
+        </p>
+      </div>
+      <!-- end .add-box__image -->
+      <input
+        type="file"
+        class="add-box__image-selector"
+        id="add-box-image-selector"
+      />
+
+      <form class="add-box__form" id="add-box-form">
+        <div class="add-box__form-group">
+          <label for="add-box-firstname" class="add-box__label"
+            >first name</label
+          >
+          <input
+            type="text"
+            class="add-box__input"
+            id="add-box-firstname"
+            autocomplete="off"
+          />
+          <p class="add-box__alert">first name is required</p>
+        </div>
+        <!-- end .add-box__form-group -->
+
+        <div class="add-box__form-group">
+          <label for="add-box-lastname" class="add-box__label">last name</label>
+          <input
+            type="text"
+            class="add-box__input"
+            id="add-box-lastname"
+            autocomplete="off"
+          />
+          <p class="add-box__alert">last name is required</p>
+        </div>
+        <!-- end .add-box__form-group -->
+
+        <div class="add-box__form-group">
+          <label for="add-box-email" class="add-box__label">email</label>
+          <input
+            type="text"
+            class="add-box__input"
+            id="add-box-email"
+            autocomplete="off"
+          />
+          <p class="add-box__alert">email is required</p>
+        </div>
+        <!-- end .add-box__form-group -->
+        <div class="add-box__buttons">
+          <button
+            class="add-box__btn add-box__btn--insert"
+            id="add-box-insert-btn"
+          >
+            add a user
+          </button>
+
+          <button
+            class="add-box__btn add-box__btn--cancel"
+            id="add-box-cancel-btn"
+          >
+            cancel
+          </button>
+        </div>
+        <!-- end .add-box__buttons -->
+      </form>
+      <!-- end .add-box__form -->
+    </div>
+    <!-- end .add-user -->
+    <div class="container outer-wrapper">
+      <header class="header">
+        <h1 class="logo">logo</h1>
+        <button class="toggle-btn d-md-none" id="toggle-btn">
+          <div class="toggle-btn__line"></div></button
+        ><!-- end .toggle-btn -->
+        <div class="nav" id="nav">
+          <div class="nav-body">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--active">home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">about us</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">contact us</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">our services</a>
+              </li>
+            </ul>
+            <!-- end .nav__list -->
+            <form class="search-box">
+              <input
+                type="text"
+                class="search-box__input"
+                placeholder="search"
+              />
+              <button class="search-box__btn">search</button>
+            </form>
+            <!-- end .search-box -->
+          </div>
+          <!-- end .nav-body -->
+        </div>
+        <!-- end .nav -->
+      </header>
+      <div class="row users" id="users"></div>
+      <!-- end .users -->
+      <div class="controls">
+        <div class="pagination" id="pagination"></div>
+        <!-- end .pagination -->
+        <button class="controls__btn" id="add-btn">add a card</button>
+      </div>
+      <!-- end .controls -->
+    </div>
+    <!-- end .container -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/pagination.js"></script>
+  </body>
+</html>
