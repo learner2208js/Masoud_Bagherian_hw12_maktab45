@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="public/fonts/font-awesome/css/font-awesome.min.css"
+    />
+    <title>post request test by http module</title>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="toast" id="toast">
+      <p class="toast__message" id="toast-message"></p>
+      <div class="toast__deadline" id="toast-deadline"></div>
+    </div>
+    <!-- end .toast -->
+    <div class="container">
+      <form class="form" id="form">
+        <h1 class="form__title">ورود به پنل کاربری</h1>
+        <div class="form__group">
+          <label for="username" class="form__label">
+            <i class="fa fa-user-o icon" aria-hidden="true"></i>
+          </label>
+          <input
+            type="text"
+            class="form__input"
+            id="username"
+            autocomplete="off"
+            placeholder="نام کاربری"
+          />
+        </div>
+        <!-- end .form__group -->
+        <div class="form__alert" id="username-alert">
+          <p class="alert"></p>
+        </div>
+        <!-- end .form__alert -->
+        <div class="form__group">
+          <label for="password" class="form__label">
+            <i class="fa fa-lock icon" aria-hidden="true"></i>
+          </label>
+          <input
+            type="text"
+            class="form__input"
+            id="password"
+            autocomplete="off"
+            placeholder="رمز عبور"
+          />
+        </div>
+        <!-- end .form__group -->
+        <div class="form__alert" id="password-alert">
+          <p class="alert"></p>
+        </div>
+        <!-- end .form__alert -->
+        <button class="form__btn" id="form-btn">ورود</button>
+        <p class="form__message">
+          حساب کاربری ندارید؟<a href="#" class="form__link">ثبت نام</a>
+        </p>
+      </form>
+      <!-- end .form -->
+    </div>
+    <!-- end .container -->
+    <script src="public/js/script.js"></script>
+  </body>
+</html>
