@@ -65,6 +65,7 @@ button:focus {
   border: 2px solid #fff;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 .form__label {
   text-transform: uppercase;
@@ -92,6 +93,17 @@ button:focus {
 }
 .form__input:focus {
   outline: none;
+}
+.password-show {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  cursor: pointer;
+}
+.password-show .icon {
+  font-size: 18px;
+  color: #6c757d;
 }
 .form__alert {
   height: 0;

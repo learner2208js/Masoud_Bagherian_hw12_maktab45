@@ -7,6 +7,7 @@ const form = {
   password: document.getElementById('password'),
   usernameAlert: document.getElementById('username-alert'),
   passwordAlert: document.getElementById('password-alert'),
+  passwordShowIcon: document.getElementById('password-show'),
 };
 
 const toast = document.getElementById('toast');
@@ -89,6 +90,22 @@ function checkAlert(e) {
     showAlert(alertContainer, message);
   }
 }
+function togglePasswordVisibility(e) {
+  e.preventDefault();
+  const icon = e.target;
+  const input = icon.parentElement.parentElement.querySelector('.form__input');
+
+  if (icon.classList.contains('fa-eye')) {
+    icon.classList.remove('fa-eye');
+    icon.classList.add('fa-eye-slash');
+    input.type = 'text';
+  } else {
+    icon.classList.remove('fa-eye-slash');
+    icon.classList.add('fa-eye');
+    input.type = 'password';
+  }
+}
 
 form.submitBtn.addEventListener('click', submitForm);
 form.body.addEventListener('input', checkAlert);
+form.passwordShowIcon.addEventListener('click', togglePasswordVisibility);
