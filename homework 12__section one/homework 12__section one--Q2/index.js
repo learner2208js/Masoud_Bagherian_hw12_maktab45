@@ -20,6 +20,10 @@ http
         res.write(users);
         res.end();
       });
+    } else {
+      res.writeHead(404);
+      res.write('<h1>page not found!</h1>');
+      res.end();
     }
   })
   .listen(8000, 'localhost');
