@@ -66,8 +66,8 @@ http
         message: 'کاربری با این مشخصات وجود ندارد',
         color: '#940909',
       };
-      req.on('data', function (reqBody) {
-        data = reqBody.toString();
+      req.on('data', function (reqBodyChunk) {
+        data += reqBodyChunk.toString();
       });
       req.on('end', function () {
         if (isUserAvailable(JSON.parse(data))) {

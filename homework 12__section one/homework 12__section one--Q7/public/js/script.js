@@ -26,8 +26,11 @@ function validateForm() {
     showAlert(form.passwordAlert, 'رمز عبور الزامی است');
   }
   if (username !== '' && password !== '') {
-    const userData = { username: username, password: password };
-    ajax({ url: '/check-user', method: 'post', data: userData });
+    if (!toastShow) {
+      toastShow = true;
+      const userData = { username: username, password: password };
+      ajax({ url: '/check-user', method: 'post', data: userData });
+    }
   }
 }
 function ajax(options) {
@@ -36,10 +39,7 @@ function ajax(options) {
   function getResponse() {
     if (this.readyState === 4) {
       const response = JSON.parse(this.response);
-      if (!toastShow) {
-        toastShow = true;
-        showToast(response);
-      }
+      showToast(response);
     }
   }
   http.open(method, url);
